@@ -1,4 +1,4 @@
-package org.example.days;
+package org.example.day1;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -8,10 +8,10 @@ import java.util.Scanner;
 
 public class Day1 {
     public static void solve() {
-        Scanner scanner = null;
+        Scanner scanner;
 
         try {
-            scanner = new Scanner(new File("src/main/resources/calories.txt"));
+            scanner = new Scanner(new File("src/main/resources/day1/calories.txt"));
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }

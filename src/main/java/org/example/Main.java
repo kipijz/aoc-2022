@@ -1,9 +1,9 @@
 package org.example;
 
-import org.example.days.Day1;
+import org.example.day2.Day2;
 
 public class Main {
     public static void main(String[] args) {
-        Day1.solve();
+        Day2.solve();
     }
 }
