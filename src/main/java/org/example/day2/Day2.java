@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
+import static org.example.day2.OutcomeType.*;
 import static org.example.day2.SelectionType.*;
 
 public class Day2 {
@@ -34,14 +35,14 @@ public class Day2 {
         int roundScore = mySelection.getValue();
 
         if (opponentsSelection.equals(mySelection)) {
-            roundScore += 3;
+            roundScore += DRAW.getValue();
         }
 
         if (hasOpponentLost(opponentsSelection, mySelection)) {
-            roundScore += 6;
+            roundScore += WIN.getValue();
         }
 
-        return roundScore;
+        return roundScore += LOSE.getValue();
     }
 
     private static boolean hasOpponentLost(SelectionType opponentsSelection, SelectionType mySelection) {
