@@ -35,14 +35,14 @@ public class Day2 {
         int roundScore = mySelection.getValue();
 
         if (opponentsSelection.equals(mySelection)) {
-            roundScore += DRAW.getValue();
+            return roundScore + DRAW.getValue();
         }
 
         if (hasOpponentLost(opponentsSelection, mySelection)) {
-            roundScore += WIN.getValue();
+            return roundScore + WIN.getValue();
         }
 
-        return roundScore += LOSE.getValue();
+        return roundScore + LOSE.getValue();
     }
 
     private static boolean hasOpponentLost(SelectionType opponentsSelection, SelectionType mySelection) {
